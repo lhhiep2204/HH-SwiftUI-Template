@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="ProjectX" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="wAu-cm-hqH" id="EgM-aR-gbL"/>
+                <outlet property="loginButton" destination="Plb-fj-yGa" id="Hmy-sf-v2U"/>
+                <outlet property="passwordTextField" destination="ZMC-lB-AvC" id="Q2s-mt-hUc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wAu-cm-hqH">
+                    <rect key="frame" x="50" y="268" width="314" height="34"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMC-lB-AvC">
+                    <rect key="frame" x="50" y="322" width="314" height="34"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plb-fj-yGa">
+                    <rect key="frame" x="177.5" y="406" width="59.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                    <connections>
+                        <action selector="actionLogin:" destination="-1" eventType="touchUpInside" id="8ep-y6-bwi"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvf-XR-uAw">
+                    <rect key="frame" x="180.5" y="194" width="53" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Plb-fj-yGa" firstAttribute="top" secondItem="ZMC-lB-AvC" secondAttribute="bottom" constant="50" id="2cx-1Y-p8W"/>
+                <constraint firstItem="ZMC-lB-AvC" firstAttribute="leading" secondItem="wAu-cm-hqH" secondAttribute="leading" id="3R7-VC-RJM"/>
+                <constraint firstItem="ZMC-lB-AvC" firstAttribute="trailing" secondItem="wAu-cm-hqH" secondAttribute="trailing" id="8BI-Bj-m7P"/>
+                <constraint firstItem="bvf-XR-uAw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="QyU-Hs-U69"/>
+                <constraint firstItem="wAu-cm-hqH" firstAttribute="top" secondItem="bvf-XR-uAw" secondAttribute="bottom" constant="50" id="SdP-7c-p42"/>
+                <constraint firstItem="wAu-cm-hqH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="VAs-uE-P61"/>
+                <constraint firstItem="bvf-XR-uAw" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="oQW-d3-cC8"/>
+                <constraint firstItem="Plb-fj-yGa" firstAttribute="centerX" secondItem="ZMC-lB-AvC" secondAttribute="centerX" id="p4L-yM-Agq"/>
+                <constraint firstItem="ZMC-lB-AvC" firstAttribute="top" secondItem="wAu-cm-hqH" secondAttribute="bottom" constant="20" id="qCU-XP-2Ig"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wAu-cm-hqH" secondAttribute="trailing" constant="50" id="qin-in-Gaj"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="86"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
