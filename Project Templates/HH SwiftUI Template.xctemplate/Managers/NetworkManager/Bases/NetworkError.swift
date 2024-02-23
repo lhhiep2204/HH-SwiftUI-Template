@@ -2,42 +2,24 @@
 
 import Foundation
 
+/// An enumeration representing common network errors.
 enum NetworkError: Error {
     case invalidUrl
-    case invalidParams
     case invalidResponse
-    case error(Int)
-    case others(String)
+    case unauthorized
+    case errorCode(Int)
+    case description(String)
 }
 
 extension NetworkError {
-    
+    /// A computed property that returns a human-readable error message for each case.
     var message: String {
         switch self {
-        case .invalidUrl:
-            return "Invalid URL"
-        case .invalidParams:
-            return "Invalid Params"
-        case .invalidResponse:
-            return "Invalid response"
-        case .error(let errorCode):
-            return handleErrorCode(errorCode)
-        case .others(let errorMessage):
-            return errorMessage
+        case .invalidUrl: "Invalid URL"
+        case .invalidResponse: "Invalid response"
+        case .unauthorized: "Unauthorized"
+        case .errorCode(let statusCode): "Response failed with status code - \(statusCode)"
+        case .description(let errorMessage): errorMessage
         }
     }
-    
-    private func handleErrorCode(_ errorCode: Int) -> String {
-        switch errorCode {
-        case 401:
-            return "Unauthorized"
-        case 403:
-            return "Request forbidden"
-        case 404:
-            return "Request not found"
-        default:
-            return String(HTTPURLResponse.localizedString(forStatusCode: errorCode))
-        }
-    }
-    
 }

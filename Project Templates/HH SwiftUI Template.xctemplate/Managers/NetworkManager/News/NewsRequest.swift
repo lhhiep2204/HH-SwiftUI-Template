@@ -7,7 +7,6 @@ enum NewsRequest {
 }
 
 extension NewsRequest: BaseRequest {
-    
     var endpoint: String {
         return Endpoint.News.everything
     }
@@ -29,5 +28,4 @@ extension NewsRequest: BaseRequest {
             ]
         }
     }
-    
 }

@@ -2,12 +2,18 @@
 
 import Foundation
 
+// MARK: - HTTPMethod Enum
+/// An enumeration representing various HTTP methods.
 enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
+    case patch = "PATCH"
+    case delete = "DELETE"
 }
 
+// MARK: - BaseRequest Protocol
+/// A protocol defining the basic structure for a network request.
 protocol BaseRequest {
     var baseURL: String { get }
     var endpoint: String { get }
@@ -17,17 +23,36 @@ protocol BaseRequest {
 }
 
 extension BaseRequest {
-    
     var baseURL: String {
-        return Configs.API.baseURL
+        "https://newsapi.org/v2"
     }
-    
+
     var header: [String: String]? {
-        return nil
+        nil
     }
-    
+
     var body: [String: String]? {
-        return nil
+        nil
     }
-    
+}
+
+struct RefreshTokenRequest: BaseRequest {
+    var baseURL: String {
+        // TODO: Replace with the project's base URL
+        "https://example-api.com/"
+    }
+
+    var endpoint: String {
+        // TODO: Replace with the specific endpoint for refreshing tokens in the project
+        "sampleEndpoint"
+    }
+
+    var method: HTTPMethod {
+        .post
+    }
+
+    var body: [String : String]? {
+        // TODO: Replace both the key and value with the actual refresh token parameter and value in your project
+        ["refresh_token": "refreshToken"]
+    }
 }
