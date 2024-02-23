@@ -4,7 +4,6 @@ import Combine
 import UIKit
 
 extension UITextField {
-    
     var publisher: AnyPublisher<String?, Never> {
         NotificationCenter.default
             .publisher(for: UITextField.textDidChangeNotification, object: self)
@@ -12,5 +11,4 @@ extension UITextField {
             .map { $0?.text }
             .eraseToAnyPublisher()
     }
-    
 }

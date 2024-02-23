@@ -26,8 +26,8 @@ Creating new projects and files is now a breeze!
 Make sure to update the `[ProjectName]App` struct in the `[ProjectName]App.swift` file with the following snippet to set up your project's routing:
 
 ```swift
-@ObservedObject private var routerManager = RouterManager(root: .launchScreen)
-    
+private var routerManager: RouterManager<Route> = .init(root: .launchScreen)
+
 var body: some Scene {
     WindowGroup {
         RouterView(routerManager)

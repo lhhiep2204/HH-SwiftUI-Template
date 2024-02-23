@@ -10,7 +10,6 @@ enum Route {
 }
 
 extension Route: View, Hashable {
-    
     var body: some View {
         switch self {
         case .launchScreen:
@@ -23,5 +22,4 @@ extension Route: View, Hashable {
             DetailView(topic: topic)
         }
     }
-    
 }

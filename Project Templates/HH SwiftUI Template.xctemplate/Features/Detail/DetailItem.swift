@@ -3,19 +3,16 @@
 import SwiftUI
 
 struct DetailItem: View {
-    
     // MARK: - Properties
     let article: Article
-    
+
     var body: some View {
         containerView
     }
-    
 }
 
 // MARK: - Views
 extension DetailItem {
-    
     private var containerView: some View {
         VStack(alignment: .leading) {
             Text(article.title ?? .empty)
@@ -27,7 +24,7 @@ extension DetailItem {
             imageView
         }
     }
-    
+
     @ViewBuilder
     private var imageView: some View {
         if let urlString = article.urlToImage,
@@ -55,7 +52,7 @@ extension DetailItem {
             }
         }
     }
-    
+
     @ViewBuilder
     private var readMoreView: some View {
         if let url = article.url {
@@ -63,13 +60,8 @@ extension DetailItem {
                 .font(.footnote)
         }
     }
-    
 }
 
-struct DetailItem_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        DetailItem(article: Article.mock())
-    }
-    
+#Preview {
+    DetailItem(article: Article.mock())
 }

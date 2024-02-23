@@ -3,7 +3,7 @@
 import Foundation
 
 /// An enumeration representing common network errors.
-enum NetworkError: Error {
+public enum NetworkError: Error {
     case invalidUrl
     case invalidResponse
     case unauthorized
@@ -11,7 +11,7 @@ enum NetworkError: Error {
     case description(String)
 }
 
-extension NetworkError {
+public extension NetworkError {
     /// A computed property that returns a human-readable error message for each case.
     var message: String {
         switch self {

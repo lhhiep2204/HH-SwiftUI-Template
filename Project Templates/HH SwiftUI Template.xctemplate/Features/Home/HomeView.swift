@@ -3,14 +3,13 @@
 import SwiftUI
 
 struct HomeView: View {
-    
     // MARK: - Properties
-    @EnvironmentObject private var router: RouterManager
+    @EnvironmentObject private var router: RouterManager<Route>
     @StateObject private var viewModel = HomeViewModel()
-    @AppStorage(UserDefaultKey.isLogin.rawValue) private var isLogin: Bool = false
-    
+    @AppStorage(UserDefaultKey.isLogin) private var isLogin: Bool = false
+
     @State private var showActionSheet = false
-    
+
     var body: some View {
         containerView
             .onReceive(viewModel.state) { state in
@@ -24,12 +23,10 @@ struct HomeView: View {
                 }
             }
     }
-    
 }
 
 // MARK: - State
 extension HomeView {
-    
     private func handleState(_ state: HomeViewModel.State) {
         switch state {
         case .logoutSuccess:
@@ -39,17 +36,15 @@ extension HomeView {
             break
         }
     }
-    
 }
 
 // MARK: - Views
 extension HomeView {
-    
     private var containerView: some View {
         listView
             .navigationTitle(StringConstant.TOPIC)
     }
-    
+
     private var listView: some View {
         List {
             ForEach(viewModel.topics) { topic in
@@ -66,7 +61,7 @@ extension HomeView {
                     }
                 }
             }
-            
+
             Section {
                 buttonView
             } footer: {
@@ -74,13 +69,13 @@ extension HomeView {
             }
         }
     }
-    
+
     private var buttonView: some View {
         Button(StringConstant.LOGOUT) {
             showActionSheet = true
         }
     }
-    
+
     private var authorView: some View {
         VStack {
             Spacer()
@@ -88,13 +83,8 @@ extension HomeView {
                 .font(.bold(.footnote)())
         }
     }
-    
 }
 
-struct HomeView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        HomeView()
-    }
-    
+#Preview {
+    HomeView()
 }

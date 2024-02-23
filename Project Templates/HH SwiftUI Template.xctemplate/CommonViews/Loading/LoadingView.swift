@@ -3,7 +3,6 @@
 import SwiftUI
 
 struct LoadingView: View {
-    
     var body: some View {
         GeometryReader { geo in
             ProgressView()
@@ -13,13 +12,8 @@ struct LoadingView: View {
                 .background(.gray.opacity(0.6))
         }
     }
-    
 }
 
-struct LoadingView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        LoadingView()
-    }
-    
+#Preview {
+    LoadingView()
 }

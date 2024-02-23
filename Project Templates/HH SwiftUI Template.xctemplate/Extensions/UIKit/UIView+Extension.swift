@@ -3,7 +3,6 @@
 import UIKit
 
 extension UIView {
-    
     func rounded() {
         self.layer.cornerRadius = self.frame.height / 2
         self.layer.masksToBounds = true
@@ -17,5 +16,4 @@ extension UIView {
         self.layer.cornerRadius = cornerRadius
         self.layer.masksToBounds = true
     }
-    
 }

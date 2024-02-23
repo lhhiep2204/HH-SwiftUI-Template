@@ -3,7 +3,6 @@
 import UIKit
 
 extension UIApplication {
-    
     var keyWindow: UIWindow? {
         // Get connected scenes
         return UIApplication.shared.connectedScenes
@@ -16,5 +15,4 @@ extension UIApplication {
         // Finally, keep only the key window
             .first(where: \.isKeyWindow)
     }
-    
 }

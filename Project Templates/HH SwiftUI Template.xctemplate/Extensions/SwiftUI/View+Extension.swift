@@ -3,7 +3,6 @@
 import SwiftUI
 
 extension View {
-    
     func addBorder(cornerRadius: CGFloat = 8,
                    borderColor: Color = .clear,
                    lineWidth: CGFloat = 1) -> some View {
@@ -65,5 +64,4 @@ extension View {
                                              posX: posX,
                                              posY: posY))
     }
-    
 }

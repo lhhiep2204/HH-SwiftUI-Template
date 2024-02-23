@@ -3,7 +3,6 @@
 import SwiftUI
 
 struct CustomShadowBackground: ViewModifier {
-    
     enum Style {
         case drop, inner
     }
@@ -30,5 +29,4 @@ struct CustomShadowBackground: ViewModifier {
                                                                    y: posY)))
         }
     }
-    
 }

@@ -7,7 +7,6 @@ enum AppEnvironment {
 }
 
 struct Configs {
-    
     struct Environment {
         static let current: AppEnvironment = {
             /// App environment: set in `Build Settings` ~> `Other Swift Flags`.
@@ -33,11 +32,8 @@ struct Configs {
             }
         }()
     }
-    
 }
 
 extension Configs {
-    
     static let API_KEY = "fe815691c8a0404ea302ee4afec37221"
-    
 }

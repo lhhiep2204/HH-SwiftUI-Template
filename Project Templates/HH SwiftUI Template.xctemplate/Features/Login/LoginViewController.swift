@@ -4,7 +4,6 @@ import Combine
 import UIKit
 
 class LoginViewController: BaseViewController<LoginViewModel> {
-    
     // MARK: - Outlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -56,24 +55,19 @@ class LoginViewController: BaseViewController<LoginViewModel> {
             }
             .store(in: &self.subscriptions)
     }
-    
 }
 
 // MARK: - Methods
 extension LoginViewController {
-    
     private func loginSuccess() {
         self.showAlert(title: "Login success!")
     }
-    
 }
 
 // MARK: - Actions
 extension LoginViewController {
-    
     @IBAction func actionLogin(_ sender: Any) {
         CommonManager.showLoading()
         self.viewModel.action.send(.login)
     }
-    
 }

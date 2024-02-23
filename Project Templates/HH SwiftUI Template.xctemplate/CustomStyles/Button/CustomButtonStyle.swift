@@ -3,7 +3,6 @@
 import SwiftUI
 
 struct CustomButtonStyle: ButtonStyle {
-    
     @Environment(\.isEnabled) var isEnabled
     @Environment(\.colorScheme) var colorScheme
     
@@ -15,5 +14,4 @@ struct CustomButtonStyle: ButtonStyle {
             .frame(height: 40)
             .clipShape(Capsule())
     }
-    
 }

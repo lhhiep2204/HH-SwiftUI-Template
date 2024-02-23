@@ -4,7 +4,6 @@ import Combine
 import UIKit
 
 class BaseViewController<VM: BaseViewModel>: UIViewController {
-    
     // MARK: - Properties
     var subscriptions = Set<AnyCancellable>()
     var viewModel: VM
@@ -28,6 +27,4 @@ class BaseViewController<VM: BaseViewModel>: UIViewController {
     func bindViewToViewModel() { }
     
     func bindViewModelToView() { }
-
 }
-

@@ -4,7 +4,6 @@ import Combine
 import Foundation
 
 class LoginViewModel: BaseViewModel {
-    
     // MARK: - Enums
     enum State {
         case initial
@@ -38,12 +37,10 @@ class LoginViewModel: BaseViewModel {
             }
             .store(in: &subscriptions)
     }
-    
 }
 
 // MARK: - Action
 extension LoginViewModel {
-    
     private func handleAction(_ action: Intent) {
         switch action {
         case .validation:
@@ -54,12 +51,10 @@ extension LoginViewModel {
             login()
         }
     }
-    
 }
 
 // MARK: - Validation
 extension LoginViewModel {
-    
     private var validatedCredentials: AnyPublisher<Bool, Never> {
         return Publishers.CombineLatest(validateUsername, validatePassword)
             .map { $0 && $1 }
@@ -77,15 +72,13 @@ extension LoginViewModel {
             .map { !$0.isEmpty }
             .eraseToAnyPublisher()
     }
-    
 }
 
 // MARK: - Methods
 extension LoginViewModel {
-    
     private func login() {
         Just(())
-            .delay(for: .seconds(2), scheduler: DispatchQueue.global())
+            .delay(for: .seconds(1), scheduler: DispatchQueue.global())
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 guard let self else { return }
@@ -98,5 +91,4 @@ extension LoginViewModel {
             }
             .store(in: &subscriptions)
     }
-    
 }

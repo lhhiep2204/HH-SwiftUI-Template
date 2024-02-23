@@ -4,7 +4,6 @@ import Combine
 import Foundation
 
 class DetailViewModel: BaseViewModel {
-    
     // MARK: - Enums
     enum State {
         case initial
@@ -36,24 +35,20 @@ class DetailViewModel: BaseViewModel {
             }
             .store(in: &subscriptions)
     }
-    
 }
 
 // MARK: - Action
 extension DetailViewModel {
-    
     private func handleAction(_ action: Intent) {
         switch action {
         case .getNews(let topic):
             getNews(topic)
         }
     }
-    
 }
 
 // MARK: - Methods
 extension DetailViewModel {
-    
     private func getNews(_ topic: String) {
         service.getNews(topic: topic)
             .sink { [weak self] completion in
@@ -69,5 +64,4 @@ extension DetailViewModel {
             }
             .store(in: &subscriptions)
     }
-    
 }

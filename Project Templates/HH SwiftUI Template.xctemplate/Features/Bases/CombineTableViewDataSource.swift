@@ -3,7 +3,6 @@
 import UIKit
 
 class CombineTableViewDataSource<Element>: NSObject, UITableViewDataSource {
-
     let build: (UITableView, IndexPath, Element) -> UITableViewCell
     var elements: [Element] = []
 
@@ -25,5 +24,4 @@ class CombineTableViewDataSource<Element>: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         self.build(tableView, indexPath, self.elements[indexPath.row])
     }
-    
 }

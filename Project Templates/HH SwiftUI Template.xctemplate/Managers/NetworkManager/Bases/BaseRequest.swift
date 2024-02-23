@@ -4,7 +4,7 @@ import Foundation
 
 // MARK: - HTTPMethod Enum
 /// An enumeration representing various HTTP methods.
-enum HTTPMethod: String {
+public enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
@@ -14,7 +14,7 @@ enum HTTPMethod: String {
 
 // MARK: - BaseRequest Protocol
 /// A protocol defining the basic structure for a network request.
-protocol BaseRequest {
+public protocol BaseRequest {
     var baseURL: String { get }
     var endpoint: String { get }
     var method: HTTPMethod { get }
@@ -22,9 +22,9 @@ protocol BaseRequest {
     var body: [String: String]? { get }
 }
 
-extension BaseRequest {
+public extension BaseRequest {
     var baseURL: String {
-        "https://newsapi.org/v2"
+        Configs.API.baseURL
     }
 
     var header: [String: String]? {

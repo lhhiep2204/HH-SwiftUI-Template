@@ -2,6 +2,6 @@
 
 import Foundation
 
-public enum UserDefaultKey: String {
-    case isLogin = "IS_LOGIN"
+struct UserDefaultKey {
+    static let isLogin = "IS_LOGIN"
 }

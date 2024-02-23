@@ -4,7 +4,7 @@ import Combine
 import Foundation
 
 /// A protocol defining the base structure for network service interactions.
-protocol BaseService {
+public protocol BaseService {
     /// Makes a generic network request and returns a Combine publisher for the specified response type.
     ///
     /// - Parameter request: The request to be sent.
@@ -12,7 +12,7 @@ protocol BaseService {
     func makeRequest<T: Decodable>(request: BaseRequest) -> AnyPublisher<T, NetworkError>
 }
 
-extension BaseService {
+public extension BaseService {
     func makeRequest<T: Decodable>(request: BaseRequest) -> AnyPublisher<T, NetworkError> {
         return makeRequest(request: request, retryCount: 3)
     }
@@ -136,7 +136,7 @@ extension BaseService {
 }
 
 #if DEBUG
-extension BaseService {
+private extension BaseService {
     /// Log details of an HTTP request.
     ///
     /// - Parameter request: The URLRequest to be logged.

@@ -3,7 +3,6 @@
 import SwiftUI
 
 struct CustomShadow: ViewModifier {
-    
     var shadowRadius: CGFloat
     var shadowColor: Color
     var posX: CGFloat
@@ -13,5 +12,4 @@ struct CustomShadow: ViewModifier {
         content
             .shadow(color: shadowColor, radius: shadowRadius, x: posX, y: posY)
     }
-    
 }

@@ -3,22 +3,21 @@
 import SwiftUI
 
 struct LoginView: View {
-    
     // MARK: - Enum
     enum FocusField {
         case username, password
     }
-    
+
     // MARK: - Properties
-    @EnvironmentObject private var router: RouterManager
+    @EnvironmentObject private var router: RouterManager<Route>
     @StateObject private var viewModel = LoginViewModel()
-    @AppStorage(UserDefaultKey.isLogin.rawValue) private var isLogin: Bool = false
-    
+    @AppStorage(UserDefaultKey.isLogin) private var isLogin: Bool = false
+
     @FocusState private var focusField: FocusField?
-    
+
     @State private var showAlert = false
     @State private var alertMessage = ""
-    
+
     var body: some View {
         containerView
             .onReceive(viewModel.state) { state in
@@ -28,12 +27,10 @@ struct LoginView: View {
                 AlertView().showErrorAlert(message: alertMessage)
             }
     }
-    
 }
 
 // MARK: - State
 extension LoginView {
-    
     private func handleState(_ state: LoginViewModel.State) {
         switch state {
         case .initial:
@@ -47,12 +44,10 @@ extension LoginView {
             showAlert = true
         }
     }
-    
 }
 
 // MARK: - Views
 extension LoginView {
-    
     private var containerView: some View {
         ZStack {
             loginView
@@ -60,7 +55,7 @@ extension LoginView {
         }
         .ignoresSafeArea(.keyboard)
     }
-    
+
     private var loginView: some View {
         VStack(spacing: 50) {
             Spacer()
@@ -71,12 +66,12 @@ extension LoginView {
             authorView
         }
     }
-    
+
     private var titleView: some View {
         Text(StringConstant.LOGIN)
             .font(.bold(.largeTitle)())
     }
-    
+
     private var inputView: some View {
         VStack(spacing: 20) {
             TextField(StringConstant.USER_NAME,
@@ -98,7 +93,7 @@ extension LoginView {
                             bottom: 0,
                             trailing: 50))
     }
-    
+
     private var buttonView: some View {
         Button(StringConstant.LOGIN) {
             focusField = .none
@@ -107,7 +102,7 @@ extension LoginView {
         .buttonStyle(CustomButtonStyle())
         .disabled(!viewModel.isValid)
     }
-    
+
     private var authorView: some View {
         HStack {
             Spacer()
@@ -117,7 +112,7 @@ extension LoginView {
                 .padding(.trailing, 20)
         }
     }
-    
+
     @ViewBuilder
     private var loadingView: some View {
         if viewModel.isLoading {
@@ -126,13 +121,8 @@ extension LoginView {
             EmptyView()
         }
     }
-    
 }
 
-struct LoginView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        LoginView()
-    }
-    
+#Preview {
+    LoginView()
 }

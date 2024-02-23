@@ -96,6 +96,7 @@
 							<string>Extensions/UIKit/UIView+Extension.swift</string>
 							<string>Utilities/Constants.swift</string>
 							<string>Utilities/Keys.swift</string>
+							<string>Utilities/Logger.swift</string>
 							<string>Utilities/Regex.swift</string>
 							<string>Utilities/StringConstants.swift</string>
 							<string>Models/Authentication/Authentication.swift</string>
@@ -356,6 +357,13 @@ DelegateManager.shared.configure()</string>
 								<key>Path</key>
 								<string>Utilities/Keys.swift</string>
 							</dict>
+							<key>Utilities/Logger.swift</key>
+							<dict>
+								<key>Group</key>
+								<string>Utilities</string>
+								<key>Path</key>
+								<string>Utilities/Logger.swift</string>
+							</dict>
 							<key>Utilities/Regex.swift</key>
 							<dict>
 								<key>Group</key>
@@ -610,6 +618,7 @@ let contentView = ContentView().environment(\.managedObjectContext, context)
 							<string>Extensions/SwiftUI/View+Extension.swift</string>
 							<string>Utilities/Constants.swift</string>
 							<string>Utilities/Keys.swift</string>
+							<string>Utilities/Logger.swift</string>
 							<string>Utilities/Regex.swift</string>
 							<string>Utilities/StringConstants.swift</string>
 							<string>Models/News/News.swift</string>
@@ -853,6 +862,13 @@ let contentView = ContentView().environment(\.managedObjectContext, context)
 								<string>Utilities</string>
 								<key>Path</key>
 								<string>Utilities/Keys.swift</string>
+							</dict>
+							<key>Utilities/Logger.swift</key>
+							<dict>
+								<key>Group</key>
+								<string>Utilities</string>
+								<key>Path</key>
+								<string>Utilities/Logger.swift</string>
 							</dict>
 							<key>Utilities/Regex.swift</key>
 							<dict>

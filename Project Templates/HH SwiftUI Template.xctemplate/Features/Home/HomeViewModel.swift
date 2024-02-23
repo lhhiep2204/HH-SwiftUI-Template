@@ -4,7 +4,6 @@ import Combine
 import Foundation
 
 class HomeViewModel: BaseViewModel {
-    
     // MARK: - Enums
     enum State {
         case initial
@@ -52,17 +51,14 @@ class HomeViewModel: BaseViewModel {
             }
             .store(in: &subscriptions)
     }
-    
 }
 
 // MARK: - Action
 extension HomeViewModel {
-    
     private func handleAction(_ action: Intent) {
         switch action {
         case .logout:
             state.send(.logoutSuccess)
         }
     }
-    
 }

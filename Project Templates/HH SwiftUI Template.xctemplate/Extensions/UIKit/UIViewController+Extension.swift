@@ -5,7 +5,6 @@ import UIKit
 
 // MARK: Navigation
 extension UIViewController {
-    
     func push(viewController: UIViewController, animated: Bool = true) {
         self.navigationController?.pushViewController(viewController, animated: animated)
     }
@@ -25,12 +24,10 @@ extension UIViewController {
     func popToRoot(animated: Bool = true) {
         self.navigationController?.popToRootViewController(animated: animated)
     }
-    
 }
 
 // MARK: - Alert
 extension UIViewController {
-    
     struct AlertAction {
         var title: String
         var style: UIAlertAction.Style
@@ -65,5 +62,4 @@ extension UIViewController {
             self.dismiss(animated: true)
         }).eraseToAnyPublisher()
     }
-    
 }

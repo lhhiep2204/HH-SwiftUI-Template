@@ -3,16 +3,15 @@
 import SwiftUI
 
 struct CacheAsyncImage<Content>: View where Content: View {
-    
     private let url: URL
     private let content: (AsyncImagePhase) -> Content
-    
+
     init(_ imageUrl: URL,
          @ViewBuilder _ contentView: @escaping (AsyncImagePhase) -> Content) {
         url = imageUrl
         content = contentView
     }
-    
+
     var body: some View {
         if let cached = ImageCache[url] {
             content(.success(cached))
@@ -22,18 +21,16 @@ struct CacheAsyncImage<Content>: View where Content: View {
             }
         }
     }
-    
+
     func cacheAndRender(phase: AsyncImagePhase) -> some View {
         if case .success(let image) = phase {
             ImageCache[url] = image
         }
         return content(phase)
     }
-    
 }
 
 fileprivate class ImageCache {
-    
     static var cache: [URL: Image] = [:]
     static subscript(url: URL) -> Image? {
         get {
@@ -43,5 +40,4 @@ fileprivate class ImageCache {
             ImageCache.cache[url] = newValue
         }
     }
-    
 }

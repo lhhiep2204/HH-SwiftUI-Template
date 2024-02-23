@@ -3,7 +3,6 @@
 import SwiftUI
 
 struct CustomBorder: ViewModifier {
-    
     var cornerRadius: CGFloat
     var borderColor: Color
     var lineWidth: CGFloat
@@ -16,5 +15,4 @@ struct CustomBorder: ViewModifier {
                     .stroke(borderColor, lineWidth: lineWidth)
             }
     }
-    
 }
