@@ -21,7 +21,7 @@ Creating new projects and files is now a breeze!
 2. Scroll down and select `HH SwiftUI Template` under the `Project Templates` category.
 3. Customize your project settings and hit "Create."
 
-<img width="741" alt="Screenshot 2023-07-28 at 14 19 35" src="https://github.com/lhhiep2204/SwiftUI-Combine-MVI/assets/46402339/4500045e-97f7-44d7-a545-defac5a20a0f">
+<img width="741" alt="256752087-4500045e-97f7-44d7-a545-defac5a20a0f" src="https://github.com/lhhiep2204/HH-SwiftUI-Template/assets/46402339/2a575dab-e29f-450e-aced-973f093dd137">
 
 Ensure to update the [ProjectName]App struct in the [ProjectName]App.swift file with the following snippet to configure your project's routing:
 
@@ -45,7 +45,7 @@ The project structure will resemble this:
 3. Scroll down and choose either `HH View Model File` or `HH SwiftUI File` under the File Templates category.
 4. Name the file and start coding!
 
-<img width="746" alt="Screenshot 2023-07-28 at 14 18 27" src="https://github.com/lhhiep2204/SwiftUI-Combine-MVI/assets/46402339/058e1973-7268-479d-92fd-401e1bd1d2f0">
+<img width="746" alt="256751660-058e1973-7268-479d-92fd-401e1bd1d2f0" src="https://github.com/lhhiep2204/HH-SwiftUI-Template/assets/46402339/ebd89b85-c1db-4592-b6b9-a3ff41156d77">
 
 #### Now you're all set to supercharge your SwiftUI development with the HH SwiftUI Template! Happy coding!
 
