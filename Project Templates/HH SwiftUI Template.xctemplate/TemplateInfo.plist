@@ -624,10 +624,6 @@ let contentView = ContentView().environment(\.managedObjectContext, context)
 							<string>Models/News/News.swift</string>
 							<string>Models/News/Arcticle.swift</string>
 							<string>Models/News/Topic.swift</string>
-							<string>CustomStyles/Common/CustomBorder.swift</string>
-							<string>CustomStyles/Common/CustomShadow.swift</string>
-							<string>CustomStyles/Common/CustomShadowBackground.swift</string>
-							<string>CustomStyles/Common/CustomShadowForeground.swift</string>
 							<string>CustomStyles/Button/CustomButtonStyle.swift</string>
 							<string>CustomStyles/TextField/CustomTextFieldStyle.swift</string>
 							<string>CommonViews/Alert/AlertView.swift</string>
@@ -913,46 +909,6 @@ let contentView = ContentView().environment(\.managedObjectContext, context)
 								</array>
 								<key>Path</key>
 								<string>Models/News/Topic.swift</string>
-							</dict>
-							<key>CustomStyles/Common/CustomBorder.swift</key>
-							<dict>
-								<key>Group</key>
-								<array>
-									<string>CustomStyles</string>
-									<string>Common</string>
-								</array>
-								<key>Path</key>
-								<string>CustomStyles/Common/CustomBorder.swift</string>
-							</dict>
-							<key>CustomStyles/Common/CustomShadow.swift</key>
-							<dict>
-								<key>Group</key>
-								<array>
-									<string>CustomStyles</string>
-									<string>Common</string>
-								</array>
-								<key>Path</key>
-								<string>CustomStyles/Common/CustomShadow.swift</string>
-							</dict>
-							<key>CustomStyles/Common/CustomShadowBackground.swift</key>
-							<dict>
-								<key>Group</key>
-								<array>
-									<string>CustomStyles</string>
-									<string>Common</string>
-								</array>
-								<key>Path</key>
-								<string>CustomStyles/Common/CustomShadowBackground.swift</string>
-							</dict>
-							<key>CustomStyles/Common/CustomShadowForeground.swift</key>
-							<dict>
-								<key>Group</key>
-								<array>
-									<string>CustomStyles</string>
-									<string>Common</string>
-								</array>
-								<key>Path</key>
-								<string>CustomStyles/Common/CustomShadowForeground.swift</string>
 							</dict>
 							<key>CustomStyles/Button/CustomButtonStyle.swift</key>
 							<dict>

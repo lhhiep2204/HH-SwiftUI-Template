@@ -45,4 +45,9 @@ public extension RouterManager {
         root = rootView
         paths.removeAll()
     }
+
+    /// The current root view in the navigation hierarchy.
+    var currentRoot: V {
+        root
+    }
 }

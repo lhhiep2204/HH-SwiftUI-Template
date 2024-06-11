@@ -4,7 +4,7 @@ import SwiftUI
 
 struct ___FILEBASENAMEASIDENTIFIER___: View {
     // MARK: - Properties
-    @EnvironmentObject private var router: RouterManager
+    @EnvironmentObject private var routerManager: RouterManager<Route>
     @StateObject private var viewModel = ___FILEBASENAMEASIDENTIFIER___Model()
 
     var body: some View {

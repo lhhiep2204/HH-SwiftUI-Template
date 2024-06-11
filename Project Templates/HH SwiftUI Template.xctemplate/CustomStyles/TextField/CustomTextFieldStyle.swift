@@ -7,6 +7,6 @@ struct CustomTextFieldStyle: TextFieldStyle {
         return configuration
             .padding(.leading, 20)
             .frame(height: 40)
-            .addBorder(cornerRadius: 20, borderColor: .gray)
+            .border(radius: 20, color: .gray)
     }
 }
