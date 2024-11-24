@@ -106,7 +106,7 @@ extension LoginView {
     private var authorView: some View {
         HStack {
             Spacer()
-            Text("Created by: Hiep Le\nhttps://github.com/lhhiep2204/SwiftUI-Combine-MVI")
+            Text("Created by: Hiep Le\nhttps://github.com/lhhiep2204")
                 .multilineTextAlignment(.trailing)
                 .font(.bold(.footnote)())
                 .padding(.trailing, 20)

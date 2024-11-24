@@ -79,7 +79,7 @@ extension HomeView {
     private var authorView: some View {
         VStack {
             Spacer()
-            Text("Created by: Hiep Le\nhttps://github.com/lhhiep2204/SwiftUI-Combine-MVI")
+            Text("Created by: Hiep Le\nhttps://github.com/lhhiep2204")
                 .font(.bold(.footnote)())
         }
     }
